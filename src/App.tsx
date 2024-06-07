@@ -11,6 +11,10 @@ const App = () => {
     {id: '3', name: 'Jake', email: 'User3@gmail.com', active: false, role: 'editor'},
   ]);
 
+  const addUser = (user: User) => {
+    setUsers((prev) => [...prev, user]);
+  }
+
   return (
     <div>
       <header>
@@ -19,7 +23,7 @@ const App = () => {
       <main>
         <div className="row m-3 d-flex justify-content-center">
           <div className="col-3 me-5">
-            <UserForm/>
+            <UserForm onSubmit={addUser}/>
           </div>
           <div className="col-3 ms-5">
             <Users users={users}/>
