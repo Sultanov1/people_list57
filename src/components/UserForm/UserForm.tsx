@@ -1,7 +1,7 @@
 const UserForm = () => {
   return (
     <div>
-      <form className="m-2">
+      <form>
         <h4>Add new Dish</h4>
         <div className="form-group mb-3">
           <label className='mb-2' htmlFor="name">Enter your Name:</label>
